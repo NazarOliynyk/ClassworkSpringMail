@@ -7,6 +7,15 @@
 </head>
 <body>
 
+<h3> 1. Registrate  a new USER </h3>
+<form th:action="@{/saveUser}" method="post">
+    <input type="" name="username" placeholder="username"/>
+    <input type="password" name="password" placeholder="password"/>
+    <input type="submit" value="go!"/>
+</form>
+
+<h2> 2. Set the name, email and avatar of a contact </h2>
+
 <form id="f1">
 
     <input type="text" name="name" placeholder="name"/>

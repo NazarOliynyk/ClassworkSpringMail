@@ -64,8 +64,13 @@ public class WebConfig implements WebMvcConfigurer {
         resourceHandlerRegistry.addResourceHandler("/css/**").addResourceLocations("file:///"+pathToFolder2);
     }
 
+    // this method is for security purposes, just works as a GetController
+    // sends to a page login having an url /login.
     @Override
-    public void addViewControllers(ViewControllerRegistry viewControllerRegistry) {
+    public void addViewControllers(ViewControllerRegistry registry) {
+
+        // it calls login template having the url /login called
+        registry.addViewController("/login").setViewName("/login");
 
     }
     @Override
